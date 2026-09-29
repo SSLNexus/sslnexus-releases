@@ -1,0 +1,43 @@
+SSLNexus Proprietary Software License
+
+Copyright © 2026 SSLNexus. All rights reserved.
+
+SSLNexus is proprietary software.
+
+Permission is granted to download, install and use the officially distributed
+SSLNexus binary packages in accordance with the applicable SSLNexus subscription,
+licence entitlement, evaluation terms, or Free-tier terms associated with the
+user or organisation.
+
+No rights are granted to:
+
+- copy, redistribute, republish, resell or sublicense SSLNexus except where
+  expressly authorised in writing by SSLNexus;
+- reverse engineer, decompile, disassemble or otherwise attempt to derive the
+  source code of SSLNexus, except where such restriction is prohibited by
+  applicable law;
+- modify or create derivative works from SSLNexus;
+- remove or alter copyright, trademark, attribution, security, licensing or
+  proprietary notices;
+- use SSLNexus outside the scope of the licence entitlement assigned to the
+  relevant user or organisation.
+
+The SSLNexus source code is not distributed through this repository.
+
+This repository contains public release metadata, checksums, software bills of
+materials and binary distribution assets. GitHub-generated archives labelled
+"Source code" contain only the contents of this public release repository and
+do not contain the SSLNexus product source code.
+
+SSLNexus private keys and customer certificate keys remain under the control
+of the customer infrastructure in accordance with the SSLNexus security model.
+
+SSLNexus is provided subject to the applicable commercial terms, service terms
+and licence entitlement associated with the software.
+
+THE SOFTWARE IS PROVIDED "AS IS" TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE
+LAW, WITHOUT WARRANTIES EXCEPT THOSE EXPRESSLY PROVIDED IN AN APPLICABLE
+WRITTEN AGREEMENT.
+
+For licensing enquiries:
+https://sslnexus.com
