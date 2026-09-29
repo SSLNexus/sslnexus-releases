@@ -1,0 +1,235 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:6957843c-e000-aad4-ebfa-2661538e6567",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-09-29T08:49:44Z",
+    "tools": [
+      {
+        "vendor": "SSLNexus",
+        "name": "scripts/sbom",
+        "version": "1"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "SSLNexus",
+      "version": "1.0.7",
+      "properties": [
+        {
+          "name": "go.version",
+          "value": "go1.27.1"
+        },
+        {
+          "name": "go.fips140",
+          "value": "v1.0.0"
+        },
+        {
+          "name": "sslnexus.fips.standard",
+          "value": "FIPS 140-3"
+        },
+        {
+          "name": "sslnexus.fips.module",
+          "value": "Go Cryptographic Module v1.0.0"
+        },
+        {
+          "name": "sslnexus.fips.cmvp_certificate",
+          "value": "5247"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "github.com/davecgh/go-spew",
+      "version": "v1.1.1",
+      "purl": "pkg:golang/github.com/davecgh/go-spew@v1.1.1",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c="
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/jackc/pgpassfile",
+      "version": "v1.0.0",
+      "purl": "pkg:golang/github.com/jackc/pgpassfile@v1.0.0",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:/6Hmqy13Ss2zCq62VdNG8tM1wchn8zjSGOBJ6icpsIM="
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/jackc/pgservicefile",
+      "version": "v0.0.0-20240606120523-5a60cdf6a761",
+      "purl": "pkg:golang/github.com/jackc/pgservicefile@v0.0.0-20240606120523-5a60cdf6a761",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:iCEnooe7UlwOQYpKFhBabPMi4aNAfoODPEFNiAnClxo="
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/jackc/pgx/v5",
+      "version": "v5.11.0",
+      "purl": "pkg:golang/github.com/jackc/pgx/v5@v5.11.0",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:IzBBtyK9AHqf98cctWFifYSci2hgQR/cd56wB4p+ogg="
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/jackc/puddle/v2",
+      "version": "v2.2.2",
+      "purl": "pkg:golang/github.com/jackc/puddle/v2@v2.2.2",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:PR8nw+E/1w0GLuRFSmiioY6UooMp6KJv0/61nB7icHo="
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/kr/pretty",
+      "version": "v0.3.0",
+      "purl": "pkg:golang/github.com/kr/pretty@v0.3.0"
+    },
+    {
+      "type": "library",
+      "name": "github.com/pmezard/go-difflib",
+      "version": "v1.0.0",
+      "purl": "pkg:golang/github.com/pmezard/go-difflib@v1.0.0",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM="
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/stretchr/objx",
+      "version": "v0.1.0",
+      "purl": "pkg:golang/github.com/stretchr/objx@v0.1.0"
+    },
+    {
+      "type": "library",
+      "name": "github.com/stretchr/testify",
+      "version": "v1.11.1",
+      "purl": "pkg:golang/github.com/stretchr/testify@v1.11.1",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:7s2iGBzp5EwR7/aIZr8ao5+dra3wiQyKjjFuvgVKu7U="
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "golang.org/x/mod",
+      "version": "v0.38.0",
+      "purl": "pkg:golang/golang.org/x/mod@v0.38.0"
+    },
+    {
+      "type": "library",
+      "name": "golang.org/x/sync",
+      "version": "v0.22.0",
+      "purl": "pkg:golang/golang.org/x/sync@v0.22.0",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:SZjpbeLmrCk4xhRSZFNZW5gFUeCeFgjekvI/+gfScek="
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "golang.org/x/text",
+      "version": "v0.41.0",
+      "purl": "pkg:golang/golang.org/x/text@v0.41.0",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:vz/seA0lnX87Othu2f/0L24RcgrXD9/YFTSuGjj3rH8="
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "golang.org/x/tools",
+      "version": "v0.48.0",
+      "purl": "pkg:golang/golang.org/x/tools@v0.48.0"
+    },
+    {
+      "type": "library",
+      "name": "gopkg.in/check.v1",
+      "version": "v1.0.0-20201130134442-10cb98267c6c",
+      "purl": "pkg:golang/gopkg.in/check.v1@v1.0.0-20201130134442-10cb98267c6c"
+    },
+    {
+      "type": "library",
+      "name": "gopkg.in/yaml.v3",
+      "version": "v3.0.1",
+      "purl": "pkg:golang/gopkg.in/yaml.v3@v3.0.1",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA="
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "ssl-nexus",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5b04878dd81af553a6103c365984ef31d1d9a4dfd6378bf966038156c2b799ab"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "ssl-nexus-server",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "972747d3363a7165e18c75a06770f522d66c7bc46303e6c4b566b3589f5b7372"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "ssl-nexus-admin",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ce8b38dac90792858b52a26f7997d5cd1aaeffdc75bbf32605ef9bc9a185d6ba"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "ssl-nexus-acme-remote",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "10072a18f6aa01d4368a0958d5bdda4977c916fdef0552ee89b5dfd0439037de"
+        }
+      ]
+    }
+  ]
+}
