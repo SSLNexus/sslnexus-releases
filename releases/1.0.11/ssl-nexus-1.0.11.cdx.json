@@ -1,0 +1,319 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:05c62070-1ec1-1af2-de7b-9fdd75c32822",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-12T16:53:45Z",
+    "tools": [
+      {
+        "vendor": "SSLNexus",
+        "name": "scripts/sbom",
+        "version": "1"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "SSLNexus",
+      "version": "1.0.11",
+      "properties": [
+        {
+          "name": "go.version",
+          "value": "go1.27.2"
+        },
+        {
+          "name": "go.fips140",
+          "value": "v1.0.0"
+        },
+        {
+          "name": "sslnexus.fips.standard",
+          "value": "FIPS 140-3"
+        },
+        {
+          "name": "sslnexus.fips.module",
+          "value": "Go Cryptographic Module v1.0.0"
+        },
+        {
+          "name": "sslnexus.fips.cmvp_certificate",
+          "value": "5247"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "github.com/aclements/go-moremath",
+      "version": "v0.0.0-20210112150236-f10218a38794",
+      "purl": "pkg:golang/github.com/aclements/go-moremath@v0.0.0-20210112150236-f10218a38794"
+    },
+    {
+      "type": "library",
+      "name": "github.com/davecgh/go-spew",
+      "version": "v1.1.1",
+      "purl": "pkg:golang/github.com/davecgh/go-spew@v1.1.1",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c="
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/inconshreveable/mousetrap",
+      "version": "v1.1.0",
+      "purl": "pkg:golang/github.com/inconshreveable/mousetrap@v1.1.0"
+    },
+    {
+      "type": "library",
+      "name": "github.com/jackc/pgpassfile",
+      "version": "v1.0.0",
+      "purl": "pkg:golang/github.com/jackc/pgpassfile@v1.0.0",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:/6Hmqy13Ss2zCq62VdNG8tM1wchn8zjSGOBJ6icpsIM="
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/jackc/pgservicefile",
+      "version": "v0.0.0-20240606120523-5a60cdf6a761",
+      "purl": "pkg:golang/github.com/jackc/pgservicefile@v0.0.0-20240606120523-5a60cdf6a761",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:iCEnooe7UlwOQYpKFhBabPMi4aNAfoODPEFNiAnClxo="
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/jackc/pgx/v5",
+      "version": "v5.11.0",
+      "purl": "pkg:golang/github.com/jackc/pgx/v5@v5.11.0",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:IzBBtyK9AHqf98cctWFifYSci2hgQR/cd56wB4p+ogg="
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/jackc/puddle/v2",
+      "version": "v2.2.2",
+      "purl": "pkg:golang/github.com/jackc/puddle/v2@v2.2.2",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:PR8nw+E/1w0GLuRFSmiioY6UooMp6KJv0/61nB7icHo="
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/kr/pretty",
+      "version": "v0.3.0",
+      "purl": "pkg:golang/github.com/kr/pretty@v0.3.0"
+    },
+    {
+      "type": "library",
+      "name": "github.com/pmezard/go-difflib",
+      "version": "v1.0.0",
+      "purl": "pkg:golang/github.com/pmezard/go-difflib@v1.0.0",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM="
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/spf13/cobra",
+      "version": "v1.10.2",
+      "purl": "pkg:golang/github.com/spf13/cobra@v1.10.2"
+    },
+    {
+      "type": "library",
+      "name": "github.com/spf13/pflag",
+      "version": "v1.0.10",
+      "purl": "pkg:golang/github.com/spf13/pflag@v1.0.10"
+    },
+    {
+      "type": "library",
+      "name": "github.com/stretchr/objx",
+      "version": "v0.1.0",
+      "purl": "pkg:golang/github.com/stretchr/objx@v0.1.0"
+    },
+    {
+      "type": "library",
+      "name": "github.com/stretchr/testify",
+      "version": "v1.11.1",
+      "purl": "pkg:golang/github.com/stretchr/testify@v1.11.1",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:7s2iGBzp5EwR7/aIZr8ao5+dra3wiQyKjjFuvgVKu7U="
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "go.etcd.io/bbolt",
+      "version": "v1.5.0",
+      "purl": "pkg:golang/go.etcd.io/bbolt@v1.5.0",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:S7GAl7Fxv12yohbwFfIbQCGDWbQbtDGPET4P/bD4lxU="
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "go.etcd.io/gofail",
+      "version": "v0.2.0",
+      "purl": "pkg:golang/go.etcd.io/gofail@v0.2.0"
+    },
+    {
+      "type": "library",
+      "name": "golang.org/x/crypto",
+      "version": "v0.57.0",
+      "purl": "pkg:golang/golang.org/x/crypto@v0.57.0",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:3ZVCjf8Ggz7zneR/EHRVx68Ctf+2pmIMP2UFhh9cC6M="
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "golang.org/x/mod",
+      "version": "v0.41.0",
+      "purl": "pkg:golang/golang.org/x/mod@v0.41.0"
+    },
+    {
+      "type": "library",
+      "name": "golang.org/x/net",
+      "version": "v0.58.0",
+      "purl": "pkg:golang/golang.org/x/net@v0.58.0"
+    },
+    {
+      "type": "library",
+      "name": "golang.org/x/perf",
+      "version": "v0.0.0-20250813145418-2f7363a06fe1",
+      "purl": "pkg:golang/golang.org/x/perf@v0.0.0-20250813145418-2f7363a06fe1"
+    },
+    {
+      "type": "library",
+      "name": "golang.org/x/sync",
+      "version": "v0.23.0",
+      "purl": "pkg:golang/golang.org/x/sync@v0.23.0",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:KameEIfc1IkluZyXWLn39Wd4tURc6GbCiISGiZm2bQk="
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "golang.org/x/sys",
+      "version": "v0.48.0",
+      "purl": "pkg:golang/golang.org/x/sys@v0.48.0",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:bbX/i/6MgT9BVLM9RT1thmxL04yeTAhbEz4SyadbXoo="
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "golang.org/x/term",
+      "version": "v0.46.0",
+      "purl": "pkg:golang/golang.org/x/term@v0.46.0"
+    },
+    {
+      "type": "library",
+      "name": "golang.org/x/text",
+      "version": "v0.42.0",
+      "purl": "pkg:golang/golang.org/x/text@v0.42.0",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:JbOZXgfeCPU9gacVtYliJqOhD+zhrEqK4LfdpmlUZqI="
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "golang.org/x/tools",
+      "version": "v0.49.0",
+      "purl": "pkg:golang/golang.org/x/tools@v0.49.0"
+    },
+    {
+      "type": "library",
+      "name": "gopkg.in/check.v1",
+      "version": "v1.0.0-20201130134442-10cb98267c6c",
+      "purl": "pkg:golang/gopkg.in/check.v1@v1.0.0-20201130134442-10cb98267c6c"
+    },
+    {
+      "type": "library",
+      "name": "gopkg.in/yaml.v3",
+      "version": "v3.0.1",
+      "purl": "pkg:golang/gopkg.in/yaml.v3@v3.0.1",
+      "properties": [
+        {
+          "name": "go.module.sum",
+          "value": "h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA="
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "ssl-nexus",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "cfef2bed245b2e5065c16d9bfa1ac5f21dcd29e343c03989539aa900af5cf618"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "ssl-nexus-server",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3a1f69b891a1c4ade9e42a6643d1561448ace7c9e460b84ed2199e177b7f6faa"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "ssl-nexus-admin",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c7f33f54bf2134a71b3645529e0c491347980812ac6398ea9943ade161c91297"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "ssl-nexus-acme-remote",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c4726ee07febfa600204f87580fbb79bdda448e2efa434ee0e03aac681b0d2fa"
+        }
+      ]
+    }
+  ]
+}

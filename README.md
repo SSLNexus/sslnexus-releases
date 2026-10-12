@@ -1,54 +1,57 @@
-# SSLNexus Releases
+# SSLNexus Client Server
 
-Official binary releases for the SSLNexus Client Server.
+Latest release: **v1.0.11**, released **12 October 2026**.
 
-This repository is intentionally **binary-release metadata only**. SSLNexus source code is not published here.
+SSLNexus is a self-hosted certificate management platform for issuing, deploying, renewing, discovering and managing certificates across Linux, Windows and application environments. Certificate keys and CA credentials remain within customer infrastructure.
 
-## Current release
+## Downloads
 
-SSLNexus 1.0.6 is the current production release in this repository. SSLNexus 1.0.5 is retained for rollback and compatibility purposes. SSLNexus 1.0.7 will be added only after its qualified release gate passes.
+Download the signed binary package for your Linux server from the [v1.0.11 release](https://github.com/SSLNexus/sslnexus-releases/releases/tag/v1.0.11):
 
-## Packages
+| Server | Package |
+| --- | --- |
+| Debian / Ubuntu, amd64 | `ssl-nexus_1.0.11_amd64.deb` |
+| RHEL / Rocky Linux / AlmaLinux, x86_64 | `ssl-nexus-1.0.11-1.el10.x86_64.rpm` |
 
-Each release provides native Linux packages where available:
+The Client Server runs on Linux and manages supported Windows targets remotely. Releases include checksums, OpenPGP signatures and a CycloneDX software bill of materials. Verify the signing-key fingerprint through a trusted SSLNexus channel before trusting a downloaded key.
 
-- Debian/Ubuntu: `.deb` (`amd64`)
-- RHEL/AlmaLinux/Rocky Linux: `.rpm` (`x86_64`)
+## Changes in v1.0.11
 
-Release assets also include SHA-256 checksums and a CycloneDX SBOM.
+- Reissue retained, valid certificates without contacting the CA, consuming issuance limits or incurring issuance charges. Request new certificate remains a separate action.
+- Keep issued certificates for recovery and redeployment, with optional encryption of stored certificate private keys.
+- Preserve the selected web server and other sites during deployment. A failed configuration check prevents reload.
+- Group repeated discovery observations and remove unwanted inventory entries while retaining deployed certificates and issuance history.
+- Improve application certificate deployment, account sign-in links and account security.
 
-## Verification
+## Install or upgrade
 
-Always verify a downloaded package before installation:
+Back up SSLNexus configuration, database and certificate material before upgrading. Include the matching unlock key if local keystore encryption is enabled. Review the release notes before installation.
 
-```bash
-sha256sum -c SHA256SUMS
-```
-
-Compare the result with the checksum file attached to the same GitHub Release.
-
-## Installation
-
-Debian/Ubuntu:
+Debian / Ubuntu:
 
 ```bash
-sudo apt install ./ssl-nexus_<version>_amd64.deb
+sudo apt install ./ssl-nexus_1.0.11_amd64.deb
 ```
 
-RHEL/AlmaLinux/Rocky Linux:
+RHEL / Rocky Linux / AlmaLinux:
 
 ```bash
-sudo dnf install ./ssl-nexus-<version>-1.el10.x86_64.rpm
+sudo dnf install ./ssl-nexus-1.0.11-1.el10.x86_64.rpm
 ```
 
-## Release history
+Upgrade in place without uninstalling the existing package. Allow a maintenance window: upgrade duration depends on database size and backup time.
 
-See [CHANGELOG.md](CHANGELOG.md) and the versioned release metadata under [`releases/`](releases/).
+After installation or upgrade:
 
-## Security and private keys
+```bash
+sudo ssl-nexus-admin preflight
+sudo ssl-nexus-admin security verify --json
+```
 
-SSLNexus is designed so certificate private keys remain within customer-controlled infrastructure whenever the selected certificate workflow allows it. Release packages should only be downloaded from official SSLNexus distribution locations and verified before installation.
+Confirm **1.0.11** in the dashboard. See the [documentation](https://docs.sslnexus.com) and the [SSLNexus website](https://sslnexus.com) for setup and supported integrations. Installation and upgrade guides are also included with the packages.
 
-## Source code
+## Security and licensing
 
-Customer/public distribution is binary-only. This repository does not contain SSLNexus source code.
+Keystore encryption is optional. Automatic unlock supports unattended renewal; protect the server, unlock key and backups separately. SSLNexus uses the Go Cryptographic Module v1.0.0; this module's validation does not constitute a separate FIPS validation of the entire SSLNexus product.
+
+Features depend on the active licence and configured integrations. This repository distributes binary packages and customer documentation.
