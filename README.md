@@ -1,52 +1,42 @@
 # SSLNexus Client Server
 
-Release: **v1.0.12** — **16 October 2026**. Includes optional scheduled host maintenance. See `RELEASE_NOTES_1.0.12.md` and `HOST_MAINTENANCE.md`.
+Read the [2.0.0 release notes](https://github.com/SSLNexus/sslnexus-releases/releases/tag/v2.0.0) for version details. The packages include the host maintenance guide in `/usr/share/doc/ssl-nexus/HOST_MAINTENANCE.md`.
 
 SSLNexus is a self-hosted certificate management platform for issuing, deploying, renewing, discovering and managing certificates across Linux, Windows and application environments. Certificate keys and CA credentials remain within customer infrastructure.
 
 ## Downloads
 
-Download the signed binary package for your Linux server from the [v1.0.12 release](https://github.com/SSLNexus/sslnexus-releases/releases/tag/v1.0.12):
+Download the package for your Linux server from the [2.0.0 release](https://github.com/SSLNexus/sslnexus-releases/releases/tag/v2.0.0).
 
 | Server | Package |
 | --- | --- |
-| Debian / Ubuntu, amd64 | `ssl-nexus_1.0.12_amd64.deb` |
-| RHEL / Rocky Linux / AlmaLinux, x86_64 | `ssl-nexus-1.0.12-1.el10.x86_64.rpm` |
+| Debian 13, amd64 | `ssl-nexus_2.0.0-1_amd64.deb` |
+| AlmaLinux 10, x86_64 | `ssl-nexus-2.0.0-1.x86_64.rpm` |
 
 The Client Server runs on Linux and manages supported Windows targets remotely. Releases include checksums, OpenPGP signatures and a CycloneDX software bill of materials. Verify the signing-key fingerprint through a trusted SSLNexus channel before trusting a downloaded key.
 
-## Changes in v1.0.12
+## Changes in 2.0.0 revision 1
 
-- Encrypt new recovery archives with a separately held, verified recovery key. See [Backup archive encryption](BACKUP_ENCRYPTION.md).
-- Schedule optional host maintenance with reviewed playbooks, advance alerts, verified remote backups and recovery checks on every plan.
-- Enable independent recovery monitoring and overdue alerts through the Authority.
-
-- Open relevant documentation directly from administration pages, sections and certificate-provider selection.
-- Reverse optional keystore encryption with a supported offline command, with verification and resumable conversion.
-- Report missing GoDaddy and The SSL Store certificate statuses explicitly.
-- Distinguish observed post-quantum certificate algorithms from hybrid TLS key exchange in SSL Monitoring.
-- Use reporting hostnames separately from target connection addresses.
-- View support conversations with formatting, supported attachments and reviewed diagnostic reports.
-- Show customer-facing staff public usernames and detailed support usage history.
-- Receive eligible evaluation extensions through the existing licence refresh.
-
-See `RELEASE_NOTES_1.0.12.md` for upgrade requirements and feature details.
-
+- Automate certificate issuance, renewal, replacement, deployment and supported revocations through Management API v1 on every licence tier. Limit each access key by estate, target, permission and expiry.
+- Issue and renew Let’s Encrypt certificates, including wildcards, with DNS-01. Connect Cloudflare, Amazon Route 53, OVHcloud, PowerDNS Authoritative, ClouDNS or Infoblox NIOS. Indusface zones can delegate validation by CNAME to a connected zone.
+- Choose when a certificate renews using either the percentage of its lifetime remaining or a fixed number of days before expiry.
+- See which renewal policies may be affected by shorter public certificate lifetimes and how much time each policy allows for recovery.
+- Deploy certificates to PRTG on Windows and use a signed licence file for eligible offline Enterprise installations.
 
 ## Install or upgrade
 
 Back up SSLNexus configuration, database and certificate material before upgrading. Include the matching unlock key if local keystore encryption is enabled. Review the release notes before installation.
 
-Debian / Ubuntu:
+Debian 13:
 
 ```bash
-sudo apt install ./ssl-nexus_1.0.12_amd64.deb
+sudo apt install ./ssl-nexus_2.0.0-1_amd64.deb
 ```
 
-RHEL / Rocky Linux / AlmaLinux:
+AlmaLinux 10:
 
 ```bash
-sudo dnf install ./ssl-nexus-1.0.12-1.el10.x86_64.rpm
+sudo dnf install ./ssl-nexus-2.0.0-1.x86_64.rpm
 ```
 
 Upgrade in place without uninstalling the existing package. Allow a maintenance window: upgrade duration depends on database size and backup time.
@@ -58,7 +48,7 @@ sudo ssl-nexus-admin preflight
 sudo ssl-nexus-admin security verify --json
 ```
 
-Confirm **1.0.12** in the dashboard. See the [documentation](https://sslnexus.com/docs/) and the [SSLNexus website](https://sslnexus.com) for setup and supported integrations. Installation and upgrade guides are also included with the packages.
+Confirm **2.0.0 revision 1** in the dashboard. See the [documentation](https://sslnexus.com/docs/) and the [SSLNexus website](https://sslnexus.com) for setup and supported integrations. Installation and upgrade guides are also included with the packages.
 
 ## Security and licensing
 
@@ -79,3 +69,9 @@ Attach PNG/JPEG images or UTF-8 TXT, LOG, MD and JSON files. Each message suppor
 Follow replies and ticket status in Support and receive email notifications. Sending messages does not deduct support time. Support usage history shows the recorded work and hours used.
 
 Organisation administrators can select **Add diagnostic report**, review the report and confirm its attachment before sending. The report excludes secret files and certificate material; larger logs are omitted. Operators and read-only users cannot generate it. The separate downloadable ZIP diagnostic bundle remains available.
+
+## Application package platform scope
+
+The package build targets are Debian 13 amd64 and AlmaLinux 10 x86_64. The published EL10 RPM is not an EL8 or EL9 package. Ubuntu, Debian 12 and other RHEL-compatible systems are outside the supported package platforms. Host-maintenance distribution support is a separate capability and does not imply package availability. Operations upgrades require an explicit match in the signed release manifest. The release manifest lists eligible systems.
+
+Before trusting a new signing key, compare its full fingerprint with an independently trusted copy. Open the official GitHub release repository directly at https://github.com/SSLNexus/sslnexus-releases and check the publisher's signing information. If the fingerprint cannot be independently confirmed there or through an established SSLNexus support contact, stop. Downloading a package, key and matching fingerprint from the same website does not independently authenticate the publisher.

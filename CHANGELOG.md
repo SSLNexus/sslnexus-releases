@@ -1,3 +1,12 @@
+# SSLNexus Client Server 2.0.0 revision 1
+
+- Updated the HTTP server to fix a crash affecting HTTP/1 connections (GO-2026-6859).
+- Automate certificate issuance, renewal, replacement, deployment and supported revocations through Management API v1 on every licence tier. Limit each access key by estate, target, permission and expiry.
+- Issue and renew Let’s Encrypt certificates, including wildcards, with DNS-01. Connect Cloudflare, Amazon Route 53, OVHcloud, PowerDNS Authoritative, ClouDNS or Infoblox NIOS. Indusface zones can delegate validation by CNAME to a connected zone.
+- Choose when a certificate renews using either the percentage of its lifetime remaining or a fixed number of days before expiry.
+- See which renewal policies may be affected by shorter public certificate lifetimes and how much time each policy allows for recovery.
+- Deploy certificates to PRTG on Windows and use a signed licence file for eligible offline Enterprise installations.
+
 # SSLNexus Client Server 1.0.12
 
 16 October 2026

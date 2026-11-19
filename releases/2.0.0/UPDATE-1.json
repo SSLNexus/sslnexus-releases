@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "version": "2.0.0",
+  "revision": "1",
+  "packages": [
+    {
+      "file": "ssl-nexus-2.0.0-1.x86_64.rpm",
+      "format": "rpm",
+      "arch": "x86_64",
+      "platforms": [
+        "almalinux:10"
+      ],
+      "package_version": "1:2.0.0-1",
+      "size": 43951534,
+      "sha256": "45c7c8b61632de10e803e0826549e3e843bcbf39f36a63a11c1c317f524dcbdc"
+    },
+    {
+      "file": "ssl-nexus_2.0.0-1_amd64.deb",
+      "format": "deb",
+      "arch": "amd64",
+      "platforms": [
+        "debian:13"
+      ],
+      "package_version": "1:2.0.0-1",
+      "size": 34764932,
+      "sha256": "9a1b154c6d7bcfd5303e43958c1ac9a080c5736672c69dcb077100f781d855de"
+    }
+  ]
+}
